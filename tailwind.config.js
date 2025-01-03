@@ -9,6 +9,7 @@ module.exports = {
           'spicy-pink': '#737376',
           'clear-blue': '#007AFF',
           'white-lilac': '#F5F9FC',
+          'iron': '#D4D4D4',
         },
       },
     },
