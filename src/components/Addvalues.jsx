@@ -25,20 +25,20 @@ const AddValues = () => {
                         type="number"
                         value={numberOne}
                         onChange={(e) => setNumberOne(e.target.value)}
-                        className="w-full p-3 border border-gray-300 rounded-md mb-4"
+                        className="w-full px-4 py-[17.5px] border border-iron rounded-md mb-4"
                         placeholder="First Number"
                     />
                     <input
                         type="number"
                         value={numberTwo}
                         onChange={(e) => setNumberTwo(e.target.value)}
-                        className="w-full p-3 border border-gray-300 rounded-md"
+                        className="w-full px-4 py-[17.5px] border border-iron rounded-md mb-4"
                         placeholder="Second Number"
                     />
-                    <p className='text-xl py-1 font-normal text-gray-700'>
+                    <p className='text-lg py-1 text-spicy-pink'>
                         {`${numberOne === "" ? "0" : numberOne}`} + {`${numberTwo === "" ? "0" : numberTwo}`} = <span className={`${answer === null ? "" : "font-bold"}`}> {`${answer === null ? "0" : answer}`} </span>
                     </p>
-                    <button type="submit" className="w-full py-3 bg-blue-500 text-white rounded-md" >Add Values </button>
+                    <button type="submit" className="w-full common-btn py-3 bg-blue-500 text-white rounded-[20px]" >Add Values </button>
                 </form>
             </div>
         </div>

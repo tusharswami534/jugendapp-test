@@ -52,38 +52,38 @@ const EventEinsenden = () => {
         <p className='text-center text-spicy-pink font-light text-[20px] leading-[30px] max-md:text-[16px] max-md:leading-[24px] max-md:text-sm'>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
           <form onSubmit={handleInputChange} className='flex flex-wrap justify-between gap-y-5 max-md:gap-y-4 mt-5 max-md:mt-4'>
               <div className='flex gap-4 py-2 px-3 bg-white border border-dashed border-iron rounded-[30px] max-lg:rounded-[20px] items-center w-full max-h-28 '>
-                <img className={`max-w-24 h-24 w-full object-cover rounded-[20px] ${image === null ? 'hidden' : ''}`} src={image} alt={image === null ? '' : 'image'} />
+                <img className={`max-w-24 h-24 w-full hover:scale-125 transition-all duration-300 ease-linear object-cover rounded-[20px] ${image === null ? 'hidden' : ''}`} src={image} alt={image === null ? '' : 'image'} />
                 <label htmlFor="file" className='max-w-24 border border-dashed iron rounded-[20px] w-full h-[80px] cursor-pointer flex justify-center items-center'>
                     <span className='flex w-[11px] h-0.5 bg-clear-blue rounded after:w-[11px] after:h-0.5 after:bg-clear-blue after:rotate-90 after:rounded'></span>
                 </label>
                 <input accept="image/*" onChange={(e) => handleImage(e)} type="file" hidden id="file" />
               </div>
-              <select onChange={(e) => setData({...data, select : e.target.value})} value={data.select} className='py-[17.5px] w-full px-4 cursor-pointer outline-none font-bold text-sm leading-[21px] placeholder:font-bold placeholder:text-sm rounded-[30px] max-lg:rounded-[20px] text-spicy-pink'>
+              <select onChange={(e) => setData({...data, select : e.target.value})} value={data.select} className='py-[17.5px] select w-full px-4 cursor-pointer outline-none font-bold text-sm leading-[21px] placeholder:font-bold placeholder:text-sm rounded-[30px] max-lg:rounded-[20px] text-spicy-pink'>
                   <option value="kategorie">Kategorie</option>
                   <option value="dummy">dummy</option>
                   <option value="dummyTwo">dummy2</option>
               </select>
               <div className='max-w-[371.5px] w-full max-lg:max-w-[unset]'>
-                <input onChange={(e) => setData({...data, title : e.target.value})} value={data.title} type="text" className='w-full py-[17.5px] px-4 outline-none rounded-[30px] max-lg:rounded-[20px] font-bold text-sm leading-[21px] placeholder:font-bold placeholder:text-sm text-spicy-pink' placeholder='Titel' />
+                <input onChange={(e) => setData({...data, title : e.target.value})} value={data.title} type="text" className='w-full py-[17.5px] px-4 outline-none rounded-[30px] max-lg:rounded-[20px] font-bold text-sm leading-[21px] placeholder:font-bold placeholder:text-sm text-spicy-pink placeholder:text-spicy-pink' placeholder='Titel' />
                 <p className='text-red-700 pl-4 pt-1 text-xs'>{error && !data.title && 'Name is required'}</p>
               </div>
               <div className='max-w-[371.5px] w-full max-lg:max-w-[unset]'>
-                <input onChange={(e) => setData({...data, datum : e.target.value})} value={data.datum} type="text" className='w-full py-[17.5px] px-4 outline-none rounded-[30px] max-lg:rounded-[20px] leading-[21px] font-bold text-sm placeholder:font-bold placeholder:text-sm text-spicy-pink' placeholder='Datum' />
+                <input onChange={(e) => setData({...data, datum : e.target.value})} value={data.datum} type="text" className='w-full py-[17.5px] px-4 outline-none rounded-[30px] max-lg:rounded-[20px] leading-[21px] font-bold text-sm placeholder:font-bold placeholder:text-sm text-spicy-pink placeholder:text-spicy-pink' placeholder='Datum' />
                 <p className='text-red-700 pl-4 pt-1 text-xs'>{error && !data.datum && 'Datum is required'}</p>
               </div>
               <div className='max-w-[371.5px] w-full max-lg:max-w-[unset]'>
-                <input onChange={(e) => setData({...data, standort : e.target.value})} value={data.standort} type="text" className='w-full py-[17.5px] px-4 outline-none rounded-[30px] max-lg:rounded-[20px] leading-[21px] font-bold text-sm placeholder:font-bold placeholder:text-sm text-spicy-pink' placeholder='Standort' />
+                <input onChange={(e) => setData({...data, standort : e.target.value})} value={data.standort} type="text" className='w-full py-[17.5px] px-4 outline-none rounded-[30px] max-lg:rounded-[20px] leading-[21px] font-bold text-sm placeholder:font-bold placeholder:text-sm text-spicy-pink placeholder:text-spicy-pink ' placeholder='Standort' />
                 <p className='text-red-700 pl-4 pt-1 text-xs'>{error && !data.standort && 'Standort is required'}</p>
               </div>
               <div className='max-w-[371.5px] w-full max-lg:max-w-[unset]'>
-                <input onChange={(e) => setData({...data, preis : e.target.value})} value={data.preis} type="text" className='w-full py-[17.5px] px-4 outline-none rounded-[30px] max-lg:rounded-[20px] leading-[21px] font-bold text-sm placeholder:font-bold placeholder:text-sm text-spicy-pink' placeholder='Preis' />
+                <input onChange={(e) => setData({...data, preis : e.target.value})} value={data.preis} type="text" className='w-full py-[17.5px] px-4 outline-none rounded-[30px] max-lg:rounded-[20px] leading-[21px] font-bold text-sm placeholder:font-bold placeholder:text-sm text-spicy-pink placeholder:text-spicy-pink' placeholder='Preis' />
                 <p className='text-red-700 pl-4 pt-1 text-xs'>{error && !data.preis && 'Preis is required'}</p>
               </div>
               <div className='w-full'>
-              <textarea onChange={(e) => setData({...data, message : e.target.value})} value={data.message} className='resize-none w-full rounded-[30px] max-lg:rounded-[20px] px-4 leading-[21px] h-[132px] outline-none font-bold text-sm placeholder:font-bold placeholder:text-sm text-spicy-pink py-[17.5px]' placeholder='Beschreibung' id=""></textarea>
+              <textarea onChange={(e) => setData({...data, message : e.target.value})} value={data.message} className='resize-none w-full rounded-[30px] max-lg:rounded-[20px] px-4  leading-[21px] h-[132px] outline-none font-bold text-sm placeholder:font-bold placeholder:text-sm text-spicy-pink placeholder:text-spicy-pink py-[17.5px] placeholder:pt-10' placeholder='Beschreibung' id=""></textarea>
               <p className='text-red-700 pl-4 pt-1 text-xs'>{error && !data.message && 'Message is required'}</p>
               </div>
-              <button type='submit' className='text-white py-4 px-[115px] max-lg:px-[90px] max-md:px-[70px] max-sm:px-[50px] rounded-[30px] max-lg:rounded-[20px] font-bold text-base mx-auto'>Event einsenden</button>
+              <button type='submit' className='text-white py-4 common-btn px-[115px] max-lg:px-[90px] max-md:px-[70px] max-sm:px-[50px] rounded-[30px] max-lg:rounded-[20px] font-bold text-base mx-auto'>Event einsenden</button>
           </form>
       </div>
       </div>
